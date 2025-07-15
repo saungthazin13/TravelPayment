@@ -37,10 +37,11 @@ This is a front-end web application built with **React + TypeScript + Tailwind C
 ---
 1. Clone the repository
 git clone https://github.com/saungthazin13/TravelPayment
-cd TravelPayment
-npm install
+cd TravelPayment=>
+npm install=>
 npm run dev
 
-## Live Demo
+## Live Demo=>
+https://travel-payment.vercel.app/
 
 
