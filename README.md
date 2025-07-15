@@ -1,69 +1,46 @@
 # React + TypeScript + Vite
+# Trip Payment App
+This is a front-end web application built with **React + TypeScript + Tailwind CSS** + shadcn/ui CSS**  that allows users to:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Search for trips
+- View trip details
+- Fill in payment details
+- Simulate a payment
+- Get a success confirmation
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Step-by-Step UI Workflow
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Home Page
+   - This is the starting point of the app.
+   - You will see a welcome message or buttons to navigate to the trip search page.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Search Page 
+   - You can search available trips using filters or search input.
+   - Each trip result includes a **"View Details"** button.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+3. Trip Detail Page 
+   - Clicking a trip opens this page.
+   - It shows all the information related to the selected trip.
+   - Has a **"Proceed to Payment"** button that routes to the payment form using that trip’s ID.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. Payment Page
+   - A form to fill **Cardholder Name**, **Card Number**, **Expiry Date**, and **CVV**.
+   - Form includes simple validation (no empty fields).
+   - After submitting, simulates a successful payment and routes to the success page.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+5. Success Page
+   - Displays a success message: **“Payment Successful”**.
+   - Includes a button to return to home or start a new search.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
+1. Clone the repository
+git clone https://github.com/saungthazin13/TravelPayment
+cd TravelPayment
+npm install
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Live Demo
+
+
