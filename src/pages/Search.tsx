@@ -16,7 +16,7 @@ const dummyTrips: Trip[] = [
     id: 1,
     from: "yangon",
     to: "bagan",
-    date: "2025-07-15",
+    date: "2025-07-19",
     time: "08:00 AM",
     price: "50000MMK ",
   },
